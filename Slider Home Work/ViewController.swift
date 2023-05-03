@@ -24,26 +24,25 @@ final class ViewController: UIViewController {
         mainView.layer.cornerRadius = CGFloat(5)
         setupSlider()
         setupLabel()
-        
     }
 
     @IBAction func sliderAction() {
         setupSlider()
         setupLabel()
-    
     }
     
     private func setupSlider() {
-        mainView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        mainView.backgroundColor = UIColor(
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value), alpha: 1
+        )
     }
-    
     
     private func setupLabel() {
         redValueLabel.text = String(format: "%.2f", redSlider.value)
         greenValueLabel.text = String(format: "%.2f", greenSlider.value)
         blueValueLabel.text = String(format: "%.2f", blueSlider.value)
-        
-        
     }
 }
 
